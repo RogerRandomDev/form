@@ -1,0 +1,28 @@
+body {
+  background-color: burlywood;
+  display: flex;
+  gap: 5%;
+  height: 100%;
+}
+.ticket {
+  max-width: 33%;
+  max-height: 100%;
+  background-color: blanchedalmond;
+}
+.ticketviewer {
+  width: 65%;
+  max-height: 75%;
+  overflow-y: hidden;
+  border-style: solid;
+  border-width: 4px;
+  border-color: black;
+  display: grid;
+  min-width: fit-content;
+  grid-template-areas:
+    'fnl fn . lnl ln' 'dobl dob . bl b' 'dl d d d d'
+    'al l l l l' 'll z rl r r' 'tdl td ml m ag' 'el e e e cl' 'o o o o o' 'o o o o o' 'o o o o o' 'o o o o o' 'o o o o o' 'o o o o o' 'o o o o o' 'o o o o o' 'o o o o o' 'o o o o o' 'o o o o o' 'o o o o o' 'o o o o o' 'o o o o o';
+  gap: 1.25%;
+}
+.underline {
+  text-decoration: underline;
+}

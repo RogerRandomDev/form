@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Roger T. Grange">
+
+    <meta name="description" content="Form">
+
+    <meta property="og:image" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Doc</title>
+</head>
+
+<body>
+    <form class="ticket" onsubmit="return submit_ticket();" id="ticket_form">
+        <fieldset>TRAIN TICKET:<br>(* is required)
+            <fieldset>
+                <label for="Fn">Passenger Name:*</label><br>
+                <input type="text" maxlength="64" placeholder="First Name" required id="Fn">
+                <input type="text" maxlength="64" placeholder="Last Name" required id="Ln"><br>
+                <hr>
+                <label for="brn">Date Of Birth:*</label><br>
+                <input type="date" id="brn" required>
+                <br>
+                <label for="leavingcity">Travel Location:*</label><br>
+                <input type="text" placeholder="Departing" required id="leavingcity">
+                <input type="text" placeholder="Arriving" required id="enteringcity"><br>
+                <hr>
+                <label for="departDate">Date:</label><br>
+                <label for="departDate">Depart:*</label>
+                <input type="date" id="departDate" required placeholder="depart date"><br>
+                <label for="departDate">Return:*</label>
+                <input type="date" id="returnDate" required placeholder="return date"><br>
+                <label for="bagcount">Bags Brought:</label><br>
+                <input type="number" required value=1 id="bagcount"><br><hr>
+                <label for="Chicken">MEAL:</label><br>
+                <label for="Chicken">Chicken</label>
+                <input type="radio" name="meal" id="Chicken" value="Chicken" checked=true><br>
+                <label for="Chicken">Steak</label>
+                <input type="radio" name="meal" id="Steak" value="Steak"><br>
+                <label for="Chicken">Beef</label>
+                <input type="radio" name="meal" id="Beef" value="Beef"><br>
+                <hr>
+                <fieldset>
+                    <legend>Extra Accomodations:</legend>
+                    <label for="legroom">Extra LegRoom</label>
+                    <input type="checkbox" id="legroom">
+                    <label for="extrafood">Extra Serving Of Meal</label>
+                    <input type="checkbox" id="extrafood"><br>
+                    <label for="legroom">Window Seat</label>
+                    <input type="checkbox" id="windowseat">
+                    <label for="legroom">HeadPhones</label>
+                    <input type="checkbox" id="headphones"><br>
+                </fieldset>
+            </fieldset>
+        </fieldset>
+        <button onclick="">Confirm Ticket</button>
+    </form>
+    <div class="ticketviewer">
+        <label style="grid-area:fnl">First Name:</label>
+        <label id="first" class="underline"style="grid-area:fn">test</label>
+        <label style="grid-area:lnl">Last Name:</label>
+        <label id="last" class="underline"style="grid-area:ln">test</label>
+        <label style="grid-area: dobl;">Date Of Birth:</label>
+        <label style="grid-area: dob;" class="underline" id="dob">0/0/2021</label>
+        <label style="grid-area: bl;">Bag Brought:</label>
+        <label style="grid-area: b;" class="underline" id="bbr">0</label>
+        <label style="grid-area: dl;">Departure From:</label>
+        <label style="grid-area: d;" class="underline" id="dep"></label>
+        <label style="grid-area: al;">Heading To:</label>
+        <label style="grid-area: l;" class="underline" id="hed"></label>
+        <label style="grid-area: ll;">Departure Date:</label>
+        <label style="grid-area: z;" class="underline" id="depd"></label>
+        <label style="grid-area: rl;">Arrival Date</label>
+        <label style="grid-area: r;" class="underline" id="arvd"></label>
+        <label style="grid-area: tdl;">Trip Duration:</label>
+        <label style="grid-area: td;" class="underline" id="durst"></label>
+        <label style="grid-area: ml;">Meal:</label>
+        <label style="grid-area: m;" class="underline" id="me"></label>
+        <label style="grid-area: ag;" id="ag">Age:</label>
+        <label style="grid-area: el;">Extras:</label>
+        <label style="grid-area: e;" class="underline" id="extr"></label>
+        <label style="grid-area: cl;" class="underline" id="cst">Cost:</label>
+        <ul style="grid-area: o;" id="ticket_list">
+        </ul>
+    </div>
+</body>
+
+<!--put here to load them in when you enter it at first for testing-->
+<script src="./script.js" type="text/javascript"></script>
